@@ -1,0 +1,9 @@
+# Criar Projeto
+django-admin startproject mysite
+python manage.py migrate
+
+# Criar superusuário admin 
+python manage.py createsuperuser
+
+# Iniciar Servidor
+python manage.py runserver
