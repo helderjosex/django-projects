@@ -15,7 +15,14 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from mysite.views import ola, data_atual, data_mais
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    # url(r'^',index),
+    url(r'^ola/', ola),
+    url(r'^hora/', data_atual),
+    url(r'^data/(\d+)/$', data_mais),
 ]
+
