@@ -1,5 +1,7 @@
 from django.http import HttpResponse
 from django.http import Http404
+from django.template.loader import get_template
+from django.template import Context
 import datetime
 
 
@@ -8,7 +10,8 @@ def ola(request):
 
 def data_atual(request):
     now = datetime.datetime.now()
-    html = "<em>Agora é %s.</em>" % now
+    t = get_template('data_atual.html')
+    html = t.render(Context({'data_atual': now}))
     return HttpResponse(html)
 
 def data_mais(request, offset):
