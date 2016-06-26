@@ -1,6 +1,7 @@
-<html>
-   <title>Data atual</title>
-   <body>
+{% extends "base.html" %}
+    {% block titulo %}Data atual{% endblock %}
+
+{% block conteudo %}
+       <h1>Informação sobre a hora</h1>
        <em>Agora é {{ data_atual }}.</em>
-     </body>
-</html>>
+{% endblock %}

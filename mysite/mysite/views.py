@@ -1,7 +1,8 @@
 from django.http import HttpResponse
 from django.http import Http404
 from django.template.loader import get_template
-from django.template import Context
+# from django.template import Context
+from django.shortcuts import render
 import datetime
 
 
@@ -10,9 +11,10 @@ def ola(request):
 
 def data_atual(request):
     now = datetime.datetime.now()
-    t = get_template('data_atual.html')
-    html = t.render(Context({'data_atual': now}))
-    return HttpResponse(html)
+    # t = get_template('data_atual.html')
+    # html = t.render(Context({'data_atual': now}))
+    # return HttpResponse(html)
+    return render(request, 'data_atual.html', {'data_atual': now})
 
 def data_mais(request, offset):
     try:
@@ -20,5 +22,6 @@ def data_mais(request, offset):
     except ValueError:
         raise Http404()
     dt = datetime.datetime.now() + datetime.timedelta(days=offset)
-    html = "<em>Em %s dia(s), será %s.</em>" % (offset, dt)
-    return HttpResponse(html)
+    # html = "<em>Em %s dia(s), será %s.</em>" % (offset, dt)
+    # return HttpResponse(html)
+    return render(request, 'data_mais.html', {'offset': offset,'data_mais': dt})
