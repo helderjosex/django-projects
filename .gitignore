@@ -1,6 +1,7 @@
 # User specific & automatically generated files #
 #################################################
 /venv
+/simplemooc/.idea
 
 # IDE and editor specific files #
 #################################
