@@ -1,7 +1,9 @@
+(Django >=1.9)
+
 # Criar Projeto
 django-admin startproject mysite
 
-# Criar Banco de dados (django >=1.9)
+# Criar Banco de dados 
 python manage.py migrate --run-syncdb
 
 # Criar superusuário admin
@@ -9,3 +11,7 @@ python manage.py createsuperuser
 
 # Iniciar Servidor
 python manage.py runserver
+
+# Criando/Modificando Models
+python manage.py makemigrations
+python manage.py migrate --run-syncdb

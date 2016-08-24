@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="4169228148">
+  <component name="DataSourceManagerImpl" format="xml" hash="1583640833">
     <data-source source="LOCAL" name="simplemooc.sqlite3" uuid="7c54b3dc-8dbf-4fac-81e1-f5c6103eb92b">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
