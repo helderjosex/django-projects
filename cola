@@ -1,3 +1,10 @@
+# Ativar Virtualenv
+. venv/bin/activate (Linux)
+
+# Desativar Virtualenv
+deactivate
+
+
 (Django >=1.9)
 
 # Criar Projeto
